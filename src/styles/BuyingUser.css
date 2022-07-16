@@ -1,0 +1,128 @@
+@import url(root.css);
+
+.modal-container {
+    display: flex;
+    height: auto;
+    border-radius: 20px;
+    color: var(--fourth-color);
+    width: 600px;
+    flex-direction: column;
+    margin: 50px 0;
+    padding: 50px;
+    background-color: rgb(226, 226, 226);
+}
+
+.modals > h2 {
+    font-size: var(--font-h1);
+    font-weight: 600;
+}
+
+.modals > p {
+    font-size: var(--font-h3);
+}
+
+.modals .modals-barang {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.modals-barang > h2 {
+    font-size: var(--font-h3);
+}
+
+.modals-barang .input-jumlah {
+    width: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.modals-harga {
+    display: flex;
+    gap: 50px;
+    font-size: var(--font-h3);
+    margin-bottom: 20px;
+}
+
+.modals-harga .title-harga {
+    font-weight: 600;
+}
+
+.modals-harga .result-harga {
+    font-weight: 300;
+}
+
+.modals-bukti .bukti{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.modals-bukti .img-transfer {
+    width: 300px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-input-bukti {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-input-bukti .btn-batal-bukti {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+}
+
+.bukti > h2 {
+    font-size: var(--font-h3);
+}
+
+.bukti > button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+.bukti-tf {
+    margin: 20px 0;
+    font-size: var(--font-h3);
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.modal-button {
+    display: flex;
+    gap: 20px;
+}
+
+.buying-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+}
+
+.batal-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(165, 165, 165);
+    color: white;
+    padding: 10px 20px;
+}

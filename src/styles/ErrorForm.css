@@ -1,0 +1,13 @@
+.error-form {
+    margin: 100px ;
+    color: var(--fourth-color);
+}
+
+.error-form > h2 {
+    font-size: var(--font-h2);
+}
+
+.link-errorlogin {
+    color: var(--main-color);
+}
+

@@ -1,0 +1,51 @@
+@import url(root.css);
+
+.login-form {
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+.login-container {
+    margin-top: 10px;
+}
+
+.error-msg {
+    font-weight: 600;
+    color: red;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-login {
+    display: flex;
+}
+
+.email-label {
+    color: var(--fourth-color);
+    font-weight: 600;
+    margin-right: 100px;
+}
+
+.password-label {
+    color: var(--fourth-color);
+    font-weight: 600;
+    margin-right: 68px;
+}
+
+.login-btn {
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    color: white;
+    margin-top: 20px;
+    padding: 5px 20px;
+}
+
+.link-accounts {
+    margin-left: 20px;
+    color: var(--main-color);
+}

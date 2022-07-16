@@ -1,0 +1,53 @@
+@import url(root.css);
+
+.forms {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+    color: var(--fourth-color);
+}
+
+.user-settings > h1 {
+    font-size: var(--font-h1);
+    margin-bottom: 20px;
+}
+
+.form-settings {
+    margin-bottom: 10px;
+}
+
+.form-settings > p {
+    font-size: var(--font-h2);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-settings > input {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(208, 208, 208);
+    padding: 10px 20px;
+    font-size: 13px;
+    width: 30%;
+}
+
+.user-settings > button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--third-color);
+    padding: 10px 20px;
+    color: white;
+    font-size: var(--font-h3);
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.forms > button {
+    border: none;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    font-size: var(--font-h3);
+    margin-top: 20px;
+}

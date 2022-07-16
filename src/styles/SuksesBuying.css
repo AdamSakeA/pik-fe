@@ -1,0 +1,25 @@
+@import url(root.css);
+
+.sukses-buying {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    text-align: center;
+    color: var(--fourth-color);
+    background-color: rgba(225, 222, 222, 0.5);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    width: 50%;
+    padding: 50px;
+}
+
+.sukses-buying .sukses-icons {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgb(49, 179, 86);
+}
+
+.link-sukses {
+    color: var(--main-color);
+    font-weight: 600;
+}

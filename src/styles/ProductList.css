@@ -1,0 +1,165 @@
+@import url(root.css);
+
+.shop-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fourth-color);
+}
+
+.shop-container > h1 {
+    font-size: var(--font-h1);
+    color: var(--fourth-color);
+    margin-bottom: 10px;
+}
+
+.shop-filter-search {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.shop-filter-search .search {
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(205, 205, 205);
+    padding: 5px 20px;
+}
+
+.shop-filter-search > button {
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: white;
+    font-size: var(--font-h3);
+    padding: 10px 20px;
+}
+
+.shop-filter-button {
+    display: flex;
+    gap: 20px;
+}
+
+.shop-filter-button > button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--third-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: var(--font-h3);
+}
+
+.shop-filter-button .active {
+    background-color: var(--main-color);
+}
+
+.list-products-all {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.list-products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.product > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.product .nama-product {
+    font-size: var(--font-h2);
+    font-weight: 600;
+    color: var(--fourth-color);
+}
+
+.product .deksripsi-product {
+    font-size: var(--font-h3);
+    font-weight: 300;
+    color: var(--fourth-color);
+}
+
+.product .harga-product {
+    font-size: var(--font-h3);
+    font-weight: 600;
+}
+
+.product > button {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+.search:focus {
+    transition: 0.5s;
+    background-color: white;
+}
+
+.modal-container .img-modal {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.modal-container > p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.modal-container > h3 {
+    font-size: var(--font-h2);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-modal-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-modal-container .btn-x {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.open {
+    background-color: var(--third-color);
+    color: white;
+}
+
+.close {
+    background-color: rgba(93, 93, 93, 0.5);
+    color: white∫;
+}

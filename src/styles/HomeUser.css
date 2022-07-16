@@ -1,0 +1,48 @@
+@import url(./root.css);
+
+.home-headline-img {
+    background: url(../components/image/Home-Headline.png);
+    height: 500px;
+    margin: 0;
+}
+
+.section { 
+    margin-top: 100px;
+}
+
+.home-contents {
+    display: flex;
+    align-items: center;
+}
+
+.title-top {
+    color: var(--fourth-color);
+    font-size: 3.125rem;
+}
+
+.content-right {
+    background: url(../components/image/Roasting-Home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 8px 16px 0px rgba(0,0,0,0.8);
+    width: 50%;
+    height: 400px;
+}
+
+.sub-content {
+    color: var(--fourth-color);
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+
+.sub {
+    width: 50%;
+}
+
+.sub > h2 {
+    font-size: var(--font-h1);
+    margin-bottom: 10px;
+}

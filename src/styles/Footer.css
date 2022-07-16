@@ -1,0 +1,37 @@
+@import url(root.css);
+
+.footers-container {
+    margin-top: 200px;
+    padding: 30px 0;
+    background: linear-gradient(180deg, #2D80A4 0%, #03567A 100%);
+    color: white;
+}
+
+.footer-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contents .footer-content > h3 {
+    font-size: var(--font-h3);
+}
+
+.footer-contents .footer-content > p {
+    font-size: var(--font-h3);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-content-right {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-contacts > h3 {
+    font-size: var(--font-h3);
+}
+
+.footer-contacts > p {
+    font-size: var(--font-h3);
+    color: rgba(255, 255, 255, 0.8);
+}
