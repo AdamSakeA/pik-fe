@@ -29,7 +29,7 @@ export default function BuyingUser({ namaProduk, deskripsiProduk, hargaProduk, t
   }
 
   const getData = async () => {
-      const response = await axios.get(`http://localhost:5000/login/${idUser}`)
+      const response = await axios.get(`https://pikbe.herokuapp.com/login/${idUser}`)
       setNamaLengkap(response.data.namalengkap);
       setAlamatUser(response.data.alamat);
       setNomorHpUser(response.data.nomorhp);
@@ -76,7 +76,7 @@ export default function BuyingUser({ namaProduk, deskripsiProduk, hargaProduk, t
       formData.append('totalharga', result)
       formData.append('img', saveImage)
 
-      fetch('http://localhost:5000/transaksi/', {
+      fetch('https://pikbe.herokuapp.com/transaksi/save', {
         method:'POST',
         body: formData
       }).then((res) => res.json()).then(data => {

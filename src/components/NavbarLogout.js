@@ -9,7 +9,7 @@ const NavbarLogout = () => {
 
     const Logout = async() => {
         try {
-            await axios.delete("http://localhost:5000/logout");
+            await axios.delete("https://pikbe.herokuapp.com/logout");
             window.localStorage.clear()
             navigate("/login");
         } catch (error) {

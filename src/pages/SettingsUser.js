@@ -21,7 +21,7 @@ export default function SettingsUser() {
   }, []);
 
   const getUserById = async () => {
-    const response = await axios.get(`http://localhost:5000/login/${id}`)
+    const response = await axios.get(`https://pikbe.herokuapp.com/users/${id}`)
       setNamaLengkap(response.data.namalengkap)
       setAlamatUser(response.data.alamat)
       setEmailUser(response.data.email)
@@ -31,7 +31,7 @@ export default function SettingsUser() {
   const updateUser = async (event) => {
     event.preventDefault();
     try {
-      await axios.patch(`http://localhost:5000/users/${id}`, {
+      await axios.patch(`https://pikbe.herokuapp.com/users/${id}`, {
         namalengkap: namaLengkap,
         alamat: alamatUser,
         email: emailUser,

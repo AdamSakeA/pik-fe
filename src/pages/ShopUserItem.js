@@ -4,6 +4,8 @@ import axios from 'axios'
 import jwt_decode from 'jwt-decode';
 import '../styles/ProductList.css';
 import BuyingUser from './BuyingUser';
+import ImageUploading from 'react-images-uploading';
+import { useEffect } from 'react';
 
 
 export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, searchProduk }) {
@@ -21,13 +23,13 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
 
     const refreshToken = async() => {
       try {
-          const response = await axios.get('http://localhost:5000/token');
+          const response = await axios.get('https://pikbe.herokuapp.com/token');
           setToken(response.data.accessToken);
           const decoded = jwt_decode(response.data.accessToken);
           setExpiredToken(decoded.exp);
       } catch (error) {
           if(error.response) {
-            navigate("/userlogin")
+            console.log(error.response.data)
           }
       }
   }
@@ -39,7 +41,7 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
     const currentDate = new Date();
 
     if(expiredToken * 1000 < currentDate.getTime()) {
-      const response = await axios.get('http://localhost:5000/token');
+      const response = await axios.get('https://pikbe.herokuapp.com/token');
       config.headers.Authorization = `Bearer ${response.data.accessToken}`;
       setToken(response.data.accessToken);
       const decoded = jwt_decode(response.data.accessToken);
@@ -49,9 +51,18 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
   }, (error) => {
     return Promise.reject(error);
   })
+  
+  const ChekLocalStorage = () => {
+    const id = localStorage.getItem('id');
+    if(id === "") {
+      navigate('/userlogin')
+    } else {
+      refreshToken()
+    }
+  }
 
     const getDetailById = async(id) => {
-      const response = await axiosJWT.get(`http://localhost:5000/products/${id}`, {
+      const response = await axiosJWT.get(`https://pikbe.herokuapp.com/product/${id}`, {
         headers:{
           Authorization: `Bearer ${token}`
         }
@@ -98,7 +109,7 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
                 <img src={`data:image/png;base64,${base64String}`} alt='test' />
                 <p className='nama-product'>{item.namaproduk}</p>
                 <p className='harga-product'>Rp. {item.hargaproduk}</p>
-                {token === "" ? <button onClick={() => refreshToken()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
+                {token === "" ? <button onClick={() => ChekLocalStorage()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
               </div>
             )
           })}
@@ -122,7 +133,7 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
                   <img src={`data:image/png;base64,${base64String}`} alt='test' />
                   <p  className='nama-product'>{item.namaproduk}</p>
                   <p className='harga-product'>Rp. {item.hargaproduk}</p>
-                  {token === "" ? <button onClick={() => refreshToken()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
+                  {token === "" ? <button onClick={() => ChekLocalStorage()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
                 </div>
               )
             })}
@@ -146,7 +157,7 @@ export default function ShopUserListItem({ listDataProducts, tipeProdukFilter, s
                   <img src={`data:image/png;base64,${base64String}`} alt='test' />
                   <p  className='nama-product'>{item.namaproduk}</p>
                   <p className='harga-product'>Rp. {item.hargaproduk}</p>
-                  {token === "" ? <button onClick={() => refreshToken()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
+                  {token === "" ? <button onClick={() => ChekLocalStorage()}>Detail</button> : <button onClick={() => getDetailById(item._id)}>Detail</button>}
                 </div>
               )
             })}

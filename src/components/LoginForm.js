@@ -14,7 +14,7 @@ function LoginForm() {
     const loginUser = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/login", {
+            const response = await axios.post("https://pikbe.herokuapp.com/login", {
                 email,
                 password,
             })
@@ -45,7 +45,6 @@ function LoginForm() {
                 </div>
             </div>
             <button className='login-btn' type='submit'>Log in</button>
-            {/* <button onClick={() => getLoginById()}>Login</button> */}
             <Link className='link-accounts' to="/register">Dont have an account?</Link>
         </form>
     )
